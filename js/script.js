@@ -10,7 +10,7 @@ let pipeSpeed = 1.5; // segundos
 // Cria placar na tela
 const scoreBoard = document.createElement('div');
 scoreBoard.className = 'score-board';
-scoreBoard.innerHTML = `Score: <span id="score">0</span> | High Score: <span id="high-score">${highScore}</span>`;
+scoreBoard.innerHTML = `<img src="mario-jump-images/star.png" alt="score" style="vertical-align:middle;width:32px;height:32px;margin-right:8px;"> Score: <span id="score">0</span> | High Score: <span id="high-score">${highScore}</span>`;
 document.body.appendChild(scoreBoard);
 
 // Botão de reiniciar
