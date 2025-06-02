@@ -38,6 +38,48 @@
     animation: clouds-animation 20s linear infinite;
 }
 
+.score-board {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-family: 'Arial Black', Arial, sans-serif;
+    color: #2d6a2d;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.restart-btn {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background: #ffb700;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Arial Black', Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.restart-btn:hover {
+    background: #ff8800;
+}
+
+.coin {
+    z-index: 5;
+    pointer-events: none;
+}
+
 @keyframes pipe-animation {
     from {
         right: -80px;
