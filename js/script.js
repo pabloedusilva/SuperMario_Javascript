@@ -10,7 +10,7 @@ let pipeSpeed = 1.5; // segundos
 // Cria placar na tela
 const scoreBoard = document.createElement('div');
 scoreBoard.className = 'score-board';
-scoreBoard.innerHTML = `<img src="mario-jump-images/star.png" alt="score" style="vertical-align:middle;width:32px;height:32px;margin-right:8px;"> Score: <span id="score">0</span> | High Score: <span id="high-score">${highScore}</span>`;
+scoreBoard.innerHTML = `<img src="mario-runner-images/star.png" alt="score" style="vertical-align:middle;width:32px;height:32px;margin-right:8px;"> Score: <span id="score">0</span> | High Score: <span id="high-score">${highScore}</span>`;
 document.body.appendChild(scoreBoard);
 
 // Botão de reiniciar
@@ -42,7 +42,7 @@ const loop = setInterval(() => {
         pipe.style.left = `${pipePosition}px`;
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
-        mario.src = './mario-jump-images/game-over.png';
+        mario.src = './mario-runner-images/game-over.png';
         mario.style.width = '75px';
         mario.style.marginLeft = '50px';
         gameActive = false;
