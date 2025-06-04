@@ -5,16 +5,32 @@
 }
 
 
+body {
+    background: url('../mario-runner-images/background.jpg') no-repeat center center fixed;
+    background-size: 80%; /* Reduz o tamanho da imagem de fundo */
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
 /* Área principal do jogo */
 
 .game-board {
-    width: 100%;
-    height: 500px;
+    width: 50%; /* Reduz a largura do contêiner */
+    height: 730px; /* Aumenta a altura do contêiner */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
     border-bottom: 15px solid rgb(35, 160, 35);
-    margin: 0 auto;
-    position: relative;
+    border-radius: 20px;
     overflow: hidden;
-    background: linear-gradient(#87CEEB, #E0F6FF);
+    background: url('../mario-runner-images/backgroundGame.png') no-repeat center center;
+    background-size: cover; /* Garante que a imagem preencha todo o contêiner */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Garante que os elementos fiquem na parte inferior */
 }
 
 
@@ -23,8 +39,8 @@
 .pipe {
     position: absolute;
     bottom: 0;
+    right: 0;
     width: 80px;
-    right: -80px;
     animation: pipe-animation 1.5s infinite linear;
 }
 
@@ -35,6 +51,7 @@
     width: 150px;
     position: absolute;
     bottom: 0;
+    left: 50px;
 }
 
 
@@ -51,6 +68,8 @@
     width: 500px;
     position: absolute;
     animation: clouds-animation 20s linear infinite;
+    top: 50px;
+    right: -550px; /* Inicia fora da tela */
 }
 
 

@@ -5,14 +5,12 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Servir arquivos estáticos das pastas css, js e mario-runner-images
-app.use('/css', express.static(path.join(__dirname, 'css')));
-app.use('/js', express.static(path.join(__dirname, 'js')));
-app.use('/mario-runner-images', express.static(path.join(__dirname, 'mario-runner-images')));
+// Atualizar os caminhos para servir arquivos da pasta 'public'
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Servir o index.html na raiz
+// Atualizar a rota para servir o index.html da pasta 'public'
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Servir README.md como texto (opcional)

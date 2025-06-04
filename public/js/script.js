@@ -36,7 +36,8 @@ const loop = setInterval(() => {
     if (!gameActive) return;
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-    // Colisão com pipe
+
+    // Restaura os valores originais de colisão
     if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
@@ -54,12 +55,14 @@ const loop = setInterval(() => {
         clearInterval(loop);
         return;
     }
+
     // Score contínuo (distância) - incrementa a cada 100ms
     frameCount++;
-    if (frameCount % 10 === 0) { // 10 x 10ms = 100ms
+    if (frameCount % 10 === 0) {
         score++;
         document.getElementById('score').innerText = score;
     }
+
     // Mantém velocidade do pipe sempre igual
     pipe.style.animationDuration = `${pipeSpeed}s`;
 }, 10);
