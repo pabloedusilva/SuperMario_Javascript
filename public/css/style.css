@@ -159,3 +159,53 @@ body {
         right: 100%;
     }
 }
+
+
+/* Estilos para a película escura com 'Game Over' */
+
+.game-over-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Película escura */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    color: white;
+    font-family: 'Press Start 2P', 'Arial Black', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+
+/* Animação de morte do Mario */
+
+.mario.game-over {
+    animation: mario-gameover-updown 1.8s forwards;
+}
+
+@keyframes mario-gameover-updown {
+    0% {
+        bottom: 0;
+        opacity: 1;
+        transform: none;
+    }
+    20% {
+        bottom: 100vh;
+        opacity: 1;
+        transform: none;
+    }
+    50% {
+        bottom: 100vh;
+        opacity: 1;
+        transform: none;
+    }
+    100% {
+        bottom: -200px;
+        opacity: 1;
+        transform: none;
+    }
+}
